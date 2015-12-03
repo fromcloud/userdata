@@ -1,0 +1,6 @@
+yum install -y nginx httpd-tools
+htpasswd -b -c /etc/nginx/htpasswd.users kibanaadmin kbnadmin123
+wget -N -P /etc/nginx/ https://raw.githubusercontent.com/fromcloud/userdata/master/nginx.conf
+wget -N -P /etc/nginx/conf.d/ https://raw.githubusercontent.com/fromcloud/userdata/master/kibana.conf
+service nginx start
+chkconfig nginx on

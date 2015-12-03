@@ -1,0 +1,8 @@
+# install logstash-forwarder
+rpm --import http://packages.elastic.co/GPG-KEY-elasticsearch
+wget -N -P /etc/yum.repos.d/ https://raw.githubusercontent.com/fromcloud/userdata/master/logstash-forwarder.repo
+yum -y install logstash-forwarder
+wget -N -P /etc/ https://raw.githubusercontent.com/fromcloud/userdata/master/logstash-forwarder.conf
+sed -i 's/server_ip/$myip/g' /etc/logstash-forwarder.conf
+service logstash-forwarder start
+chkconfig logstash-forwarder on
