@@ -1,7 +1,0 @@
-# install elasticsearch
-rpm --import http://packages.elastic.co/GPG-KEY-elasticsearch
-wget -N -P /etc/yum.repos.d/ https://raw.githubusercontent.com/fromcloud/userdata/master/elasticsearch.repo
-yum -y install elasticsearch
-wget -N -P /etc/elasticsearch/ https://raw.githubusercontent.com/fromcloud/userdata/master/elasticsearch.yml
-service elasticsearch start
-chkconfig elasticsearch on
