@@ -1,5 +1,6 @@
 #!/bin/bash
 
+echo 0 >/selinux/enforce
 groupadd -g 1005 kibana
 useradd -u 1005 -g 1005 kibana
 wget -N -P /tmp/ https://download.elastic.co/kibana/kibana/kibana-4.3.0-linux-x64.tar.gz
