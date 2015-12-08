@@ -1,7 +1,7 @@
 # install elasticsearch
 
 yum update -y
-yum install java-1.8.0-openjdk
+yum install -y java-1.8.0-openjdk
 rpm --import http://packages.elastic.co/GPG-KEY-elasticsearch
 yes | cp -rf /userdata/install_elk/elasticsearch.repo /etc/yum.repos.d/
 yum install -y elasticsearch
