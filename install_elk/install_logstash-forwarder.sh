@@ -2,7 +2,7 @@
 
 rpm --import http://packages.elastic.co/GPG-KEY-elasticsearch
 yes | cp -rf /userdata/install_elk/logstash-forwarder.repo /etc/yum.repos.d/
-yum -y install logstash-forwarder
+yum install -y logstash-forwarder
 yes | cp -rf /userdata/install_elk/logstash-forwarder.conf /etc/
 vrip=$(curl /var/lib/dhclient/dhclient-eth0.leases | grep dhcp-server-identifier | tail -1 | awk '{print $3}' | tr -d ';')
 myip=$(curl http://$vrip/latest/local-ipv4)
