@@ -1,0 +1,11 @@
+file_roots:
+  base:
+    - /salt/states/base
+  development:
+    - /salt/states/dev
+
+pillar_roots:
+  base:
+    - /salt/pillars/base
+
+auto_accept: True
