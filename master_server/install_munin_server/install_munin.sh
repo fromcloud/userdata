@@ -1,8 +1,8 @@
 #!/bin/bash
 
-file_path=/userdata/master_server/install_munin_server
-yum upgrade -y ca-certificates
+yum update -y
 yum install -y epel-release
+file_path=/userdata/master_server/install_munin_server
 yum install -y nginx httpd-tools
 yum install -y munin munin-node rrdtool
 htpasswd -b -c /etc/nginx/munin-htpasswd.users muninadmin muninadmin123

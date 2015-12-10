@@ -1,9 +1,11 @@
 #!/bin/bash
 
+yum update -y
+yum install -y epel-release
 file_path=/userdata/master_server/install_salt_master
 yum install -y salt salt-api salt-cloud salt-master salt-minion
-yes | cp -rp $file_path/master /etc/salt/
-yes | mkdir -rp /salt/states/base /salt/states/dev /salt/pillars/base
+yes | cp -p $file_path/master /etc/salt/
+yes | mkdir -p /salt/states/base /salt/states/dev /salt/pillars/base
 chkconfig salt-master on
 service salt-master restart
 
