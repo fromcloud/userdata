@@ -1,6 +1,6 @@
 #!/bin/bash
 
-file_path=/userdata/master_server/install_elk
+file_path=/userdata/master_server/install_elk_server
 yum install -y nginx httpd-tools
 htpasswd -b -c /etc/nginx/kibana-htpasswd.users kibanaadmin kbnadmin123
 yes | cp -rp $file_path/nginx.conf /etc/nginx/

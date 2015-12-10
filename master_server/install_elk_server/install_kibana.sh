@@ -1,6 +1,6 @@
 #!/bin/bash
 
-file_path=/userdata/master_server/install_elk
+file_path=/userdata/master_server/install_elk_server
 echo 0 >/selinux/enforce
 groupadd kibana
 useradd -g kibana  kibana

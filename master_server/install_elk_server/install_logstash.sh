@@ -1,6 +1,6 @@
 #!/bin/bash
 
-file_path=/userdata/master_server/install_elk
+file_path=/userdata/master_server/install_elk_server
 yes | cp -rp $file_path/logstash.repo /etc/yum.repos.d/
 yum install -y logstash
 yes | cp -rp $file_path/openssl.cnf /etc/pki/tls/

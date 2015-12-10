@@ -1,6 +1,6 @@
 #!/bin/bash 
 
-file_path=/userdata/master_server/install_elk
+file_path=/userdata/master_server/install_elk_server
 rpm --import http://packages.elastic.co/GPG-KEY-elasticsearch
 yes | cp -rf $file_path/logstash-forwarder.repo /etc/yum.repos.d/
 yum install -y logstash-forwarder
