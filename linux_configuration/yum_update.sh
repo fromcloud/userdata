@@ -1,4 +1,4 @@
 #!/bin/bash
 
-yum upgrade ca-certificates
-yum -y install epel-release
+yum update -y 
+yum install -y epel-release
