@@ -8,3 +8,4 @@ EOL
 
 chmod +x /etc/init.d/interface_up.sh
 update-rc.d interface_up.sh defaults 100
+/etc/init.d/interface_up.sh
