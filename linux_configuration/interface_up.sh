@@ -1,4 +1,4 @@
 #!/bin/bash
 
-ifcfg eth1 0.0.0.0 0.0.0.0 && dhclient
-echo "ifconfig eth1 0.0.0.0 0.0.0.0 && dhclient" >>/etc/rc.d/rc.local
+dhclient eth1
+echo "dhclient eth1" >>/etc/rc.local
