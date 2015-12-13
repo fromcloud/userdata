@@ -1,6 +1,6 @@
 #!/bin/bash
 
-yum update -y
+yum update -y ca-certificates
 yum install -y epel-release
 file_path=/userdata/master_server/install_salt_master
 yum install -y salt salt-api salt-cloud salt-master salt-minion

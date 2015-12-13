@@ -1,6 +1,6 @@
 #!/bin/bash
 
-yum update -y
+yum update -y ca-certificates
 yum install -y epel-release
 file_path=/userdata/master_server/install_munin_server
 yum install -y nginx httpd-tools

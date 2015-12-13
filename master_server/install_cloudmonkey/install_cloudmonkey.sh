@@ -1,6 +1,6 @@
 #!/bin/bash
 
-yum update -y
+yum update -y ca-certificates
 yum install -y epel-release
 yum install -y readline hg
 wget https://pypi.python.org/packages/2.7/P/Pygments/Pygments-1.6-py2.7.egg#md5=1e1e52b1e434502682aab08938163034 --no-check-certificate

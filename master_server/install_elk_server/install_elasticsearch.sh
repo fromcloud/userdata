@@ -1,6 +1,6 @@
 # install elasticsearch
 
-yum update -y
+yum update -y ca-certificates
 yum install -y epel-release
 file_path=/userdata/master_server/install_elk_server
 yum install -y java-1.8.0-openjdk
