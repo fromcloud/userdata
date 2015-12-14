@@ -9,7 +9,7 @@ rm -rf /etc/nginx/conf.d/default.conf
 cp -rp $file_path/nginx.conf /etc/nginx/
 cp -rp $file_path/munin-web.conf /etc/nginx/conf.d/
 cp -rp $file_path/munin.conf /etc/munin/
-htpasswd -b -c /var/www/munin-htpasswd mn mn
+htpasswd -b /etc/nginx/htpasswd.users mn mn
 service nginx restart
 chkconfig nginx on
 service munin-node restart
