@@ -1,8 +1,9 @@
 #!/bin/bash
 
 file_path=/userdata/master_server/install_elk_server
-cp -rp $file_path/logstash.repo /etc/yum.repos.d/
-yum install -y logstash
+yum install -y $file_path/logstash-2.0.0-1.noarch.rpm
+#cp -rp $file_path/logstash.repo /etc/yum.repos.d/
+#yum install -y logstash
 cp -rp $file_path/openssl.cnf /etc/pki/tls/
 vrip=$(cat /var/lib/dhclient/dhclient-eth0.leases | grep dhcp-server-identifier | tail -1 | awk '{print $3}' | tr -d ';')
 myip=$(curl http://$vrip/latest/local-ipv4)
